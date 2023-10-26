@@ -9,7 +9,7 @@ public class FbSignInPage extends BaseClass{
     @FindBy(xpath = "//input[@class=\"inputtext _55r1 _6luy\"]")
     WebElement input;
 
-     boolean inputBox(){
+     boolean box(){
         return input.isEnabled();
     }
 

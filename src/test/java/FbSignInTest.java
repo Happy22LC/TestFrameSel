@@ -1,5 +1,6 @@
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
@@ -10,6 +11,11 @@ public class FbSignInTest extends BaseClass{
     void openBrowser(){
         sign = PageFactory.initElements(BaseClass.driver, FbSignInPage.class);
         setup("https://facebook.com");
+    }
+
+    @AfterMethod
+    void quitBrowser(){
+        closeBrowser();
     }
 
     @Test
@@ -23,7 +29,7 @@ public class FbSignInTest extends BaseClass{
     @Test
     void testInputBox(){
         boolean expected = true;
-        boolean actual = sign.inputBox();
+        boolean actual = sign.box();
         Assert.assertEquals(expected, actual);
 
     }

@@ -10,4 +10,8 @@ public class BaseClass {
         driver = new ChromeDriver();
         driver.get(url);
     }
+
+    void closeBrowser(){
+        driver.quit();
+    }
 }
