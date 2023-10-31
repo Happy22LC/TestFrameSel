@@ -10,7 +10,7 @@ public class FbSignInPage extends BaseClass{
     WebElement input;
 
      boolean box(){
-        return input.isEnabled();
+        return input.isDisplayed();
     }
 
 
